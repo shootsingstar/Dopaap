@@ -1,6 +1,12 @@
 # csv
 *.csv
 
+# 训练中间数据
+*.data
+
+# 模型数据
+*.h5
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
