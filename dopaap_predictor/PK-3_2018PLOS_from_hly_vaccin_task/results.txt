@@ -1,0 +1,30 @@
+此实验的结果来自两部分。
+部分一：
+    代码、结果储存在“R1-res”文件夹中。
+
+部分二：
+    包含allele： ['HLA-A_0202','HLA-A_0201','HLA-A_3002','HLA-A_0203',
+                'HLA-B_2705','HLA-A_0301','HLA-B_5301','HLA-A_6802','HLA-A_3301']
+    即上述allele 的结果和代码，储存在“R3-res”文件夹中。
+    这些allele对应的模型，相较于部分一，增加了一个普通卷积层[（5,5,5）,kernel num 同第一个卷积层]，并调整了kernel number的大小。
+
+经过这两部分，得到基准数据集中class I的预测值，储存为文件“predresults_class1_R1+R3.csv”。
+最后算得 决定系数 R2 = 0.6626169644402822。
+
+
+部分三：2023年2月26日更新
+文件《2ndexpt(trainvaltest)》：
+1. 数据来源：
+1）allele['HLA-B_2704','HLA-B_2706','HLA-B_3801']由于自己收集的数据很少，因此来源于MHCflurry训练验证集。
+数据获得代码见“/raid/hly/PK-4[MHCflurry]/no_mass_spec/data_process(other allele).ipynb”。
+2）其他allele的数据来源于PK-3收集的数据。
+
+2. 参数：
+1）allele： ['HLA-A_0202','HLA-A_0201','HLA-A_3002','HLA-A_0203',
+                'HLA-B_2705','HLA-A_0301','HLA-B_5301','HLA-A_6802','HLA-A_3301']
+    参数来源于： “/raid/hly/PK-3[2018PLOS]/R3-res/R3_res.csv”
+    架构来源于：/raid/hly/PK-3[2018PLOS]/R3-res/expt-COVKN.ipynb，即多了个COV层。
+
+2）其余allele:
+    参数来源于： “/raid/hly/PK-3[2018PLOS]/R1-res/results_R1.csv”
+    架构来源于：'/raid/hly/PK-3[2018PLOS]/R1-res/PK-3_class_1.ipynb'
