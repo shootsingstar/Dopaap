@@ -7,6 +7,9 @@
 # 模型数据
 *.h5
 
+# Ignore TensorFlow SaveModel folder
+tf_model/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
